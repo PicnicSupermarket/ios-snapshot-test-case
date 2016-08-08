@@ -24,11 +24,11 @@ BOOL FBSnapshotTestCaseIs64Bit(void)
 NSOrderedSet *FBSnapshotTestCaseDefaultSuffixes(void)
 {
   NSMutableOrderedSet *suffixesSet = [[NSMutableOrderedSet alloc] init];
-  [suffixesSet addObject:@"_32"];
-  [suffixesSet addObject:@"_64"];
   if (FBSnapshotTestCaseIs64Bit()) {
-    return [suffixesSet reversedOrderedSet];
-  } 
+    [suffixesSet addObject:@"_64"];
+  } else {
+    [suffixesSet addObject:@"_32"];
+  }
   return [suffixesSet copy];
 }
 
