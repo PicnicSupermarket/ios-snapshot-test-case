@@ -258,7 +258,6 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
     NSString *fileName = [self _fileNameForSelector:selector
                                          identifier:identifier
                                        fileNameType:fileNameType];
-
     NSString *filePath = [_imageDiffDirectory stringByAppendingPathComponent:self.folderName];
     filePath = [filePath stringByAppendingPathComponent:fileName];
     return filePath;
